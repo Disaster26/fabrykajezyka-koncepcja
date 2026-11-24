@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow" data-podglad>
+<title>Szkoła językowa w Trzciance - Fabryka Języka | angielski, niemiecki, francuski, hiszpański</title>
+<meta name="description" content="Fabryka Języka w Trzciance: kursy angielskiego, niemieckiego, francuskiego i hiszpańskiego dla dzieci, młodzieży i dorosłych. Akredytowane Centrum Metody Teddy Eddie dla dzieci 2-7 lat.">
+<meta name="theme-color" content="#20315D">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/lato900-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lato400-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/zajecia-1024.webp" imagesrcset="img/zajecia-640.webp 640w, img/zajecia-1024.webp 1024w, img/zajecia-1600.webp 1600w, img/zajecia-2560.webp 2560w" imagesizes="(max-aspect-ratio: 4/3) 134svh, 100vw" fetchpriority="high">
+<style>
+@font-face{font-family:Lato;font-weight:400;font-display:swap;src:url(fonts/lato400-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Lato;font-weight:400;font-display:swap;src:url(fonts/lato400-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:Lato;font-weight:700;font-display:swap;src:url(fonts/lato700-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Lato;font-weight:700;font-display:swap;src:url(fonts/lato700-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:Lato;font-weight:900;font-display:swap;src:url(fonts/lato900-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Lato;font-weight:900;font-display:swap;src:url(fonts/lato900-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--granat:#20315D;--granat-2:#18264A;--czerwien:#E31E24;--blekit:#00A0E3;--szary:#EEF1F5;--tekst:#1B2440;--tekst-2:#4A5373;--w:1200px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 17px/1.6 Lato,Arial,sans-serif;color:var(--tekst);background:#fff;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-weight:900;line-height:1.1;margin:0;letter-spacing:-.01em;color:var(--granat)}
+h2{font-size:clamp(30px,4.2vw,50px)}
+p{margin:0 0 1em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px}
+
+/* znak z logo: dwa dymki */
+.znak{width:44px;height:52px;flex:none}
+
+/* nagłówek */
+.top{position:fixed;inset:0 0 auto;z-index:50;background:var(--granat);color:#fff;transition:box-shadow .2s}
+.top.cien{box-shadow:0 6px 24px rgba(10,20,50,.25)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:72px;max-width:1360px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;line-height:1.05}
+.logo b{display:block;font-size:19px;font-weight:700;letter-spacing:.02em}
+.logo span{display:block;font-size:15px;font-weight:400;letter-spacing:.06em;opacity:.92}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:700;font-size:16px;padding:10px 14px;position:relative}
+.menu a::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:3px;background:var(--czerwien);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.menu a:hover::after,.menu a.akt::after{transform:scaleX(1)}
+.tel{display:inline-flex;align-items:center;text-decoration:none;font-weight:900;font-size:17px;background:#fff;color:var(--granat);padding:10px 16px;white-space:nowrap}
+.burger{display:none;background:none;border:0;color:#fff;width:48px;height:48px;padding:12px;cursor:pointer}
+.burger i{display:block;height:3px;background:currentColor;margin:5px 0;transition:transform .2s,opacity .2s}
+
+/* przycisk w kształcie dymka */
+.btn{display:inline-block;position:relative;background:var(--czerwien);color:#fff;text-decoration:none;font-weight:900;font-size:18px;padding:16px 28px;border:0;cursor:pointer;font-family:inherit;margin-bottom:14px}
+.btn::after{content:"";position:absolute;left:0;top:100%;border-style:solid;border-width:14px 18px 0 0;border-color:var(--czerwien) transparent transparent transparent;transition:border-color .2s}
+.btn:hover{background:#C8141A}.btn:hover::after{border-top-color:#C8141A}
+.btn.blue{background:var(--blekit)}.btn.blue::after{border-top-color:var(--blekit)}
+
+/* pierwszy ekran */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:96px 0 48px;color:#fff;isolation:isolate}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 40%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(270deg,rgba(18,28,58,.5) 0%,rgba(18,28,58,.1) 50%,rgba(18,28,58,0) 100%),linear-gradient(0deg,rgba(18,28,58,.45) 0%,rgba(18,28,58,0) 45%)}
+.hero .wrap{width:100%;max-width:1360px;display:flex;justify-content:flex-end}
+.dymek{position:relative;max-width:600px;width:100%;padding:36px 40px 40px;background:var(--granat);margin-bottom:34px}
+.dymek::after{content:"";position:absolute;left:0;top:100%;border-style:solid;border-width:34px 44px 0 0;border-color:var(--granat) transparent transparent transparent}
+.dymek::before{content:"";position:absolute;top:-18px;right:-18px;left:18px;bottom:18px;border:4px solid var(--blekit);z-index:-1;pointer-events:none}
+.dymek{isolation:auto}
+.dymek h1{color:#fff;font-size:clamp(34px,4.4vw,58px)}
+.dymek .haslo{font-size:clamp(19px,1.7vw,23px);font-weight:700;margin:14px 0 8px;color:#fff}
+.dymek .haslo em{font-style:normal;color:var(--blekit)}
+.dymek .opis{font-size:17px;opacity:.92;margin:0 0 26px}
+.kropki{display:inline-flex;gap:7px;margin-bottom:16px}.kropki i{width:9px;height:9px;border-radius:50%;background:#fff}
+
+/* języki */
+.jezyki{padding:96px 0 88px}
+.sek-glowa{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:44px}
+.sek-glowa p{max-width:520px;color:var(--tekst-2);margin:0}
+.siatka-j{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.jez{position:relative;padding:30px 28px 46px;min-height:300px}
+.jez svg.ramka{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:-1}
+.jez{isolation:isolate}
+.jez .powitanie{font-size:44px;font-weight:900;line-height:1;margin-bottom:18px}
+.jez h3{font-size:21px;margin-bottom:10px}
+.jez p{font-size:16px;color:var(--tekst-2);margin:0}
+.jez.r .powitanie{color:var(--czerwien)}.jez.b .powitanie{color:var(--blekit)}
+
+/* teddy eddie */
+.teddy{background:var(--szary);padding:96px 0}
+.teddy .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+.foto-dymek{position:relative;margin-bottom:40px}
+.foto-dymek img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.foto-dymek::after{content:"";position:absolute;left:0;top:100%;border-style:solid;border-width:36px 46px 0 0;border-color:var(--blekit) transparent transparent transparent}
+.foto-dymek::before{content:"";position:absolute;inset:0;border-bottom:10px solid var(--blekit);pointer-events:none;z-index:1}
+.akred{display:inline-block;background:var(--blekit);color:#fff;font-weight:700;padding:6px 12px;font-size:15px;margin-bottom:18px}
+.teddy h2{margin-bottom:20px}
+.grupy{margin:28px 0 24px;border-top:2px solid var(--granat)}
+.grupa{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;padding:16px 0;border-bottom:1px solid #C9D0DC;align-items:baseline}
+.grupa b{font-size:19px;color:var(--granat)}
+.grupa span{color:var(--tekst-2)}
+.grupa .wiek{font-weight:700;color:var(--czerwien)}
+.drobne{font-size:15px;color:var(--tekst-2)}
+
+/* o nas */
+.onas{padding:96px 0 80px}
+.onas .uklad{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:start}
+.cytat{position:relative;background:var(--granat);color:#fff;padding:34px 36px;margin:8px 0 48px;font-size:21px;line-height:1.45;font-weight:700}
+.cytat::after{content:"";position:absolute;left:0;top:100%;border-style:solid;border-width:30px 40px 0 0;border-color:var(--granat) transparent transparent transparent}
+.cytat small{display:block;margin-top:16px;font-size:15px;font-weight:400;opacity:.85}
+.onas h2{margin-bottom:22px}
+.onas .tekst p{color:var(--tekst-2)}
+.galeria{margin-top:56px;position:relative}
+.tasma{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;padding-bottom:4px;overscroll-behavior-x:contain}
+.tasma::-webkit-scrollbar{display:none}
+.tasma.ciag{cursor:grabbing;scroll-snap-type:none}
+.tasma figure{margin:0;flex:0 0 auto;scroll-snap-align:start;width:min(420px,78vw)}
+.tasma img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.tasma figcaption{font-size:15px;color:var(--tekst-2);margin-top:8px}
+.strzalki{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
+.strzalki button{width:52px;height:46px;border:2px solid var(--granat);background:#fff;color:var(--granat);font:900 22px/1 Lato,Arial,sans-serif;cursor:pointer}
+.strzalki button:hover{background:var(--granat);color:#fff}
+
+/* lektorki */
+.kadra{background:var(--szary);padding:88px 0}
+.kadra .tasma figure{width:150px;text-align:left}
+@media (min-width:1200px){.kadra .strzalki{display:none}}
+.twarz{position:relative;width:150px;height:150px;margin-bottom:28px}
+.twarz img{width:150px;height:150px;aspect-ratio:1;pointer-events:none}
+.twarz::after{content:"";position:absolute;left:0;top:100%;border-style:solid;border-width:18px 22px 0 0;border-color:var(--czerwien) transparent transparent transparent}
+.twarz::before{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--czerwien);z-index:1}
+.kadra figure:nth-child(even) .twarz::after{border-top-color:var(--blekit)}.kadra figure:nth-child(even) .twarz::before{background:var(--blekit)}
+.kadra b{display:block;font-size:18px;color:var(--granat);line-height:1.25}
+.kadra figcaption span{display:block;font-size:15px;color:var(--tekst-2);margin-top:4px}
+
+/* kontakt */
+.kontakt{background:var(--granat);color:#fff;padding:96px 0 88px;position:relative;overflow:hidden}
+.kontakt h2{color:#fff;margin-bottom:18px}
+.pozegnania{display:flex;flex-wrap:wrap;gap:22px 16px;margin:0 0 56px;padding:0;list-style:none}
+.pozegnania li{position:relative;padding:10px 18px;font-weight:900;font-size:clamp(18px,2vw,24px);border:3px solid var(--blekit)}
+.pozegnania li::after{content:"";position:absolute;left:-3px;top:100%;border-style:solid;border-width:14px 18px 0 0;border-color:var(--blekit) transparent transparent transparent}
+.pozegnania li:nth-child(odd){border-color:var(--czerwien)}.pozegnania li:nth-child(odd)::after{border-top-color:var(--czerwien)}
+.kontakt .uklad{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:start}
+.dane{font-size:18px}
+.dane dt{font-size:14px;letter-spacing:.04em;color:#AFC0E4;margin-top:20px}
+.dane dd{margin:2px 0 0;font-weight:700;font-size:21px}
+.dane a{text-decoration:none;border-bottom:2px solid rgba(255,255,255,.35)}
+.dane a:hover{border-bottom-color:#fff}
+.mapa{margin-top:32px;aspect-ratio:16/10;background:#2A3C6E;position:relative}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapa button{position:absolute;inset:0;width:100%;background:#2A3C6E;color:#fff;border:0;font:700 17px Lato,Arial,sans-serif;cursor:pointer}
+form{background:#fff;color:var(--tekst);padding:34px 34px 30px;position:relative}
+form::after{content:"";position:absolute;right:0;top:100%;border-style:solid;border-width:30px 0 0 40px;border-color:#fff transparent transparent transparent}
+form h3{font-size:26px;margin-bottom:6px}
+form > p{color:var(--tekst-2);font-size:16px}
+label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px;color:var(--granat)}
+input,select,textarea{width:100%;font:400 17px Lato,Arial,sans-serif;padding:13px 14px;border:2px solid #C9D0DC;background:#fff;color:var(--tekst);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blekit)}
+textarea{min-height:110px;resize:vertical}
+form .btn{margin-top:22px}
+.info{font-size:14px;color:var(--tekst-2);margin:8px 0 0}
+
+/* stopka */
+.stopka{background:var(--granat-2);color:#C3CCE2;padding:44px 0 32px;font-size:15px}
+.stopka .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px 40px}
+.stopka b{color:#fff}
+.stopka a{text-decoration:none}
+.stopka ul{list-style:none;margin:0;padding:0}.stopka li{margin:4px 0}
+.stopka .dol{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px;margin-top:6px}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+@media (max-width:1080px){
+  .siatka-j{grid-template-columns:repeat(2,1fr)}
+  .menu a{padding:10px 9px}
+}
+@media (max-width:900px){
+  .burger{display:block;margin-left:auto}
+  .menu{position:fixed;top:64px;left:0;right:0;background:var(--granat);flex-direction:column;padding:8px 20px 22px;gap:0;transform:translateY(-120%);transition:transform .25s;z-index:-1;margin:0}
+  .menu.otw{transform:none}
+  .menu a{font-size:20px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .menu a::after{left:0;right:auto;width:40px;bottom:8px}
+  .top .wrap{height:64px;gap:10px}
+  .top .tel{display:none}
+  .menu .tel-m{display:block;margin-top:14px;background:#fff;color:var(--granat);text-align:center;border:0}
+  .menu .tel-m::after{display:none}
+  .burger.otw i:nth-child(1){transform:translateY(8px) rotate(45deg)}.burger.otw i:nth-child(2){opacity:0}.burger.otw i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  .teddy .wrap,.onas .uklad,.kontakt .uklad{grid-template-columns:1fr;gap:40px}
+  .foto-dymek{max-width:520px}
+  .stopka .wrap{grid-template-columns:1fr 1fr}
+  .stopka .wrap > div:first-child{grid-column:1/-1}
+}
+@media (min-width:901px){.menu .tel-m{display:none}}
+@media (max-width:600px){
+  body{font-size:16px}
+  .logo b{font-size:16px}.logo span{font-size:13px}.znak{width:36px;height:43px}
+  .hero{padding:80px 0 26px}
+  .hero picture img{object-position:22% 30%}
+  .hero::before{background:linear-gradient(0deg,rgba(18,28,58,.55) 0%,rgba(18,28,58,0) 60%)}
+  .dymek{padding:22px 20px 24px;margin-right:6px;margin-bottom:26px}
+  .dymek::after{border-width:24px 32px 0 0}
+  .dymek::before{top:-10px;right:-10px;left:10px;bottom:10px;border-width:3px}
+  .dymek h1{font-size:clamp(28px,8.4vw,36px)}
+  .dymek .haslo{font-size:18px;margin:10px 0 6px}
+  .dymek .opis{font-size:15px;margin-bottom:24px;line-height:1.5}
+  .kropki{margin-bottom:10px}
+  .btn{font-size:17px;padding:14px 22px}
+  .jezyki,.teddy,.onas,.kadra,.kontakt{padding:64px 0}
+  .siatka-j{grid-template-columns:1fr;gap:34px}
+  .jez{min-height:0;padding:24px 22px 40px}
+  .jez .powitanie{font-size:38px}
+  .grupa{grid-template-columns:1fr 1fr;gap:2px 12px}
+  .grupa b{grid-column:1/-1}
+  .cytat{font-size:18px;padding:24px 22px}
+  form{padding:24px 20px}
+  .stopka{font-size:14px}
+  .stopka .wrap{gap:22px}
+}
+@media (max-height:700px) and (max-width:600px){
+  .hero{padding-top:74px;padding-bottom:18px}
+  .dymek{padding:18px 18px 20px}
+  .dymek h1{font-size:28px}
+  .dymek .haslo{font-size:17px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="znak" viewBox="30 30 510 650">
+    <path d="M140 178H420L509 85V445H140Z" fill="none" stroke="#00A0E3" stroke-width="37"/>
+    <path d="M57 262H425V528H145L57 622Z" fill="none" stroke="#E31E24" stroke-width="37"/>
+    <circle cx="212" cy="353" r="16" fill="#fff"/><circle cx="283" cy="353" r="16" fill="#fff"/><circle cx="354" cy="353" r="16" fill="#fff"/>
+  </symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Fabryka Języka - strona główna">
+      <svg class="znak" aria-hidden="true"><use href="#znak"/></svg>
+      <span><b>FABRYKA JĘZYKA</b><span>SZKOŁA JĘZYKOWA</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Menu główne">
+      <a href="#jezyki">Kursy językowe</a>
+      <a href="#teddy-eddie">Teddy Eddie</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#lektorki">Lektorki</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel tel-m" href="tel:+48500540034">Zadzwoń: 500 540 034</a>
+    </nav>
+    <a class="tel" href="tel:+48500540034">500 540 034</a>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="tresc">
+<section class="hero">
+  <picture>
+    <img src="img/zajecia-1024.webp" srcset="img/zajecia-640.webp 640w, img/zajecia-1024.webp 1024w, img/zajecia-1600.webp 1600w, img/zajecia-2560.webp 2560w" sizes="(max-aspect-ratio: 4/3) 134svh, 100vw" width="2560" height="1920" alt="Zajęcia z angielskiego metodą Teddy Eddie w sali Fabryki Języka - dzieci siedzą w kole z lektorką" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <div class="dymek">
+      <span class="kropki" aria-hidden="true"><i></i><i></i><i></i></span>
+      <h1>Szkoła językowa w&nbsp;Trzciance</h1>
+      <p class="haslo">Wystarczy, że masz chęci. <em>Resztę zostaw nam.</em></p>
+      <p class="opis">Angielski, niemiecki, francuski i hiszpański dla dzieci od 2 lat, młodzieży i dorosłych.</p>
+      <a class="btn" href="#kontakt">Zapisz się na kurs</a>
+    </div>
+  </div>
+</section>
+
+<section class="jezyki" id="jezyki">
+  <div class="wrap">
+    <div class="sek-glowa">
+      <h2>Cztery języki, jedna rozmowa</h2>
+      <p>Uczymy z pasją: w komfortowej i przyjaznej atmosferze, metodą dobraną do wieku i poziomu, tak żeby chciało się przychodzić na kolejne zajęcia.</p>
+    </div>
+    <div class="siatka-j">
+      <article class="jez r">
+        <svg class="ramka" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H100V90H16L0 104Z" fill="none" stroke="#E31E24" stroke-width="5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="powitanie" lang="en">Hello!</div>
+        <h3>Angielski</h3>
+        <p>Dla dzieci od 2. klasy szkoły podstawowej, młodzieży i dorosłych. Kursy na materiałach National Geographic, które uczą swobodnej rozmowy.</p>
+      </article>
+      <article class="jez b">
+        <svg class="ramka" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H100V90H16L0 104Z" fill="none" stroke="#00A0E3" stroke-width="5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="powitanie" lang="de">Hallo!</div>
+        <h3>Niemiecki</h3>
+        <p>Bez szkolnego schematu: zamiast standardowego podręcznika ciekawe materiały, dzięki którym postępy widać z zajęć na zajęcia.</p>
+      </article>
+      <article class="jez r">
+        <svg class="ramka" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H100V90H16L0 104Z" fill="none" stroke="#E31E24" stroke-width="5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="powitanie" lang="fr">Bonjour!</div>
+        <h3>Francuski</h3>
+        <p>Nauka, która wciąga: inspirujące materiały i lektor, który dopasowuje tempo do grupy i do Twoich celów.</p>
+      </article>
+      <article class="jez b">
+        <svg class="ramka" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H100V90H16L0 104Z" fill="none" stroke="#00A0E3" stroke-width="5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="powitanie" lang="es">¡Hola!</div>
+        <h3>Hiszpański</h3>
+        <p>Najmłodszy język w Fabryce: zajęcia prowadzi lektorka hiszpańskiego, na materiałach, które motywują do dalszej nauki.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="teddy" id="teddy-eddie">
+  <div class="wrap">
+    <figure class="foto-dymek" style="margin:0 0 40px">
+      <img src="img/karty-800.webp" srcset="img/karty-480.webp 480w, img/karty-800.webp 800w, img/karty-1200.webp 1200w" sizes="(max-width:900px) min(520px,100vw), 460px" width="1200" height="1478" alt="Dzieci układają obrazki z angielskimi słówkami na podłodze sali" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <span class="akred">Akredytowane Centrum Metody Teddy Eddie</span>
+      <h2>Angielski z Misiem dla dzieci od 2 do 7 lat</h2>
+      <p>Gry, zabawy ruchowe, piosenki, historyjki i zabawki dydaktyczne. Dzieci świetnie się bawią, a przy okazji uczą się języka, który zostanie z nimi na całe życie. Rodzic na bieżąco wie, jakie postępy robi jego pociecha.</p>
+      <div class="grupy">
+        <div class="grupa"><b>Teddy Eddie START</b><span class="wiek">2-3 lata</span><span>2 x 25 min tygodniowo</span></div>
+        <div class="grupa"><b>Teddy Eddie STANDARD</b><span class="wiek">4-5 lat</span><span>2 x 35 min tygodniowo</span></div>
+        <div class="grupa"><b>Teddy Eddie ABC</b><span class="wiek">6 lat</span><span>2 x 45 min tygodniowo</span></div>
+        <div class="grupa"><b>Teddy Eddie SCHOOL</b><span class="wiek">7 lat</span><span>2 x 45 min tygodniowo</span></div>
+      </div>
+      <p class="drobne">Każdy kurs to 62 lekcje. Zestaw kursanta i materiały online są w cenie kursu.</p>
+      <a class="btn blue" href="#kontakt">Zapytaj o miejsce w grupie</a>
+    </div>
+  </div>
+</section>
+
+<section class="onas" id="o-nas">
+  <div class="wrap">
+    <div class="uklad">
+      <div class="tekst">
+        <h2>Fabryka, w której z chęci powstaje mowa</h2>
+        <p>Znajomość choćby jednego języka obcego to klucz, który otwiera świat: podróże, pracę, rozmowy z ludźmi z różnych zakątków globu. Fabryka Języka powstała, bo w okolicy Trzcianki brakowało lektorów, którzy łączą solidną wiedzę z umiejętnością jej przekazania.</p>
+        <p>Uczymy w komfortowych, jasnych salach na osiedlu Poniatowskiego. Najmłodsi mają własną salę z zabawkami, mapą świata i Misiem, starsi kursanci uczą się w sali z dużym stołem i tablicą.</p>
+      </div>
+      <blockquote class="cytat" style="margin-inline:0">
+        Języki obce od zawsze były moją pasją, a powołaniem jest zaszczepianie tej pasji w kolejnych osobach.
+        <small>Agata Kurowska, założycielka szkoły, lektorka angielskiego, niemieckiego i francuskiego</small>
+      </blockquote>
+    </div>
+    <div class="galeria">
+      <div class="tasma" data-tasma>
+        <figure><img src="img/sala-teddy-800.webp" srcset="img/sala-teddy-480.webp 480w, img/sala-teddy-800.webp 800w" sizes="420px" width="800" height="719" alt="Sala dla najmłodszych z mapą świata i Misiem Teddy Eddie" loading="lazy" decoding="async"><figcaption>Sala dla najmłodszych</figcaption></figure>
+        <figure><img src="img/grupa-800.webp" srcset="img/grupa-480.webp 480w, img/grupa-800.webp 800w" sizes="420px" width="800" height="600" alt="Grupa dzieci podczas zajęć przy wspólnym stole" loading="lazy" decoding="async"><figcaption>Zajęcia w grupie szkolnej</figcaption></figure>
+        <figure><img src="img/gra-828.webp" srcset="img/gra-480.webp 480w, img/gra-828.webp 828w" sizes="420px" width="828" height="621" alt="Dzieci grają w grę planszową po angielsku" loading="lazy" decoding="async"><figcaption>Nauka przez grę</figcaption></figure>
+        <figure><img src="img/sala-800.webp" srcset="img/sala-480.webp 480w, img/sala-800.webp 800w" sizes="420px" width="800" height="600" alt="Sala do zajęć dla młodzieży i dorosłych z dużym stołem i tablicą" loading="lazy" decoding="async"><figcaption>Sala dla młodzieży i dorosłych</figcaption></figure>
+        <figure><img src="img/zajecia-640.webp" width="640" height="480" alt="Zajęcia Teddy Eddie: dzieci w kole z lektorką" loading="lazy" decoding="async"><figcaption>Teddy Eddie na zajęciach</figcaption></figure>
+      </div>
+      <div class="strzalki"><button type="button" data-w="-1" aria-label="Poprzednie zdjęcie">&larr;</button><button type="button" data-w="1" aria-label="Następne zdjęcie">&rarr;</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="kadra" id="lektorki">
+  <div class="wrap">
+    <div class="sek-glowa">
+      <h2>Lektorki Fabryki Języka</h2>
+      <p>Nauczycielki, dla których język to nie tylko zawód. Metody dobierają do wieku, doświadczenia i poziomu kursanta.</p>
+    </div>
+    <div class="tasma" data-tasma>
+      <figure><div class="twarz"><img src="img/lektor-agata-300.webp" width="150" height="150" alt="Agata Kurowska" loading="lazy"></div><figcaption><b>Agata Kurowska</b><span>właścicielka, angielski, niemiecki, francuski</span></figcaption></figure>
+      <figure><div class="twarz"><img src="img/lektor-malgorzata-300.webp" width="150" height="150" alt="Małgorzata Dubrawska-Kukiel" loading="lazy"></div><figcaption><b>Małgorzata Dubrawska-Kukiel</b><span>angielski</span></figcaption></figure>
+      <figure><div class="twarz"><img src="img/lektor-maja-300.webp" width="150" height="150" alt="Maja Wieloch" loading="lazy"></div><figcaption><b>Maja Wieloch</b><span>angielski</span></figcaption></figure>
+      <figure><div class="twarz"><img src="img/lektor-honorata-300.webp" width="150" height="150" alt="Honorata Radwańska" loading="lazy"></div><figcaption><b>Honorata Radwańska</b><span>angielski</span></figcaption></figure>
+      <figure><div class="twarz"><img src="img/lektor-sara-300.webp" width="150" height="150" alt="Sara Bajraszewska" loading="lazy"></div><figcaption><b>Sara Bajraszewska</b><span>angielski</span></figcaption></figure>
+      <figure><div class="twarz"><img src="img/lektor-dominika-300.webp" width="150" height="150" alt="Dominika Zalewska" loading="lazy"></div><figcaption><b>Dominika Zalewska</b><span>hiszpański</span></figcaption></figure>
+      <figure><div class="twarz"><img src="img/lektor-paulina-300.webp" width="150" height="150" alt="Paulina Maszek" loading="lazy"></div><figcaption><b>Paulina Maszek</b><span>angielski</span></figcaption></figure>
+    </div>
+    <div class="strzalki"><button type="button" data-w="-1" aria-label="Poprzednie">&larr;</button><button type="button" data-w="1" aria-label="Następne">&rarr;</button></div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <h2>Do zobaczenia w Fabryce!</h2>
+    <ul class="pozegnania" aria-label="Do zobaczenia w czterech językach">
+      <li lang="en">See you!</li><li lang="fr">Au revoir!</li><li lang="de">Auf Wiedersehen!</li><li lang="es">¡Adiós!</li>
+    </ul>
+    <div class="uklad">
+      <div>
+        <dl class="dane">
+          <dt>Telefon</dt><dd><a href="tel:+48500540034">500 540 034</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:szkola.fabryka.jezyka@gmail.com">szkola.fabryka.jezyka@gmail.com</a></dd>
+          <dt>Adres</dt><dd>os. Poniatowskiego 17a<br>64-980 Trzcianka</dd>
+          <dt>Facebook</dt><dd><a href="https://www.facebook.com/fabryka.jezyka.trzcianka/" rel="noopener" target="_blank">fabryka.jezyka.trzcianka</a></dd>
+        </dl>
+        <div class="mapa" id="mapa"><button type="button" data-mapa>Pokaż mapę dojazdu</button></div>
+      </div>
+      <form onsubmit="event.preventDefault();this.querySelector('.info').textContent='To formularz pokazowy w podglądzie - na docelowej stronie zgłoszenie trafi prosto na e-mail szkoły.'">
+        <h3>Zapisz się albo zapytaj</h3>
+        <p>Odpiszemy z informacją o wolnych miejscach i godzinach zajęć.</p>
+        <label for="f-imie">Imię i nazwisko</label><input id="f-imie" name="imie" autocomplete="name">
+        <label for="f-kontakt">Telefon lub e-mail</label><input id="f-kontakt" name="kontakt">
+        <label for="f-kurs">Kurs</label>
+        <select id="f-kurs" name="kurs"><option>Teddy Eddie (2-7 lat)</option><option>Angielski - dzieci i młodzież</option><option>Angielski - dorośli</option><option>Niemiecki</option><option>Francuski</option><option>Hiszpański</option></select>
+        <label for="f-wiad">Wiadomość</label><textarea id="f-wiad" name="wiadomosc" placeholder="Np. wiek dziecka, poziom, preferowane dni"></textarea>
+        <button class="btn" type="submit">Wyślij zgłoszenie</button>
+        <p class="info" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#"><svg class="znak" aria-hidden="true"><use href="#znak"/></svg><span><b>FABRYKA JĘZYKA</b><span>SZKOŁA JĘZYKOWA</span></span></a>
+      <p style="margin:14px 0 0">Szkoła Językowa „Fabryka Języka” Agata Kurowska<br>os. Poniatowskiego 17a, 64-980 Trzcianka</p>
+    </div>
+    <div><b>Kursy</b><ul><li><a href="#jezyki">Angielski</a></li><li><a href="#jezyki">Niemiecki</a></li><li><a href="#jezyki">Francuski</a></li><li><a href="#jezyki">Hiszpański</a></li><li><a href="#teddy-eddie">Teddy Eddie</a></li></ul></div>
+    <div><b>Kontakt</b><ul><li><a href="tel:+48500540034">500 540 034</a></li><li><a href="mailto:szkola.fabryka.jezyka@gmail.com">E-mail</a></li><li><a href="https://www.facebook.com/fabryka.jezyka.trzcianka/" rel="noopener" target="_blank">Facebook</a></li></ul></div>
+    <div class="dol">
+      <span>© 2026 Fabryka Języka. Uczymy z pasją.</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=fabryka-jezyka.com&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var top=document.getElementById('top'),b=document.getElementById('burger'),m=document.getElementById('menu');
+  addEventListener('scroll',function(){top.classList.toggle('cien',scrollY>10)},{passive:true});
+  b.addEventListener('click',function(){var o=m.classList.toggle('otw');b.classList.toggle('otw',o);b.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('otw');b.classList.remove('otw');b.setAttribute('aria-expanded','false')}});
+  document.querySelectorAll('[data-tasma]').forEach(function(t){
+    var d=false,x0=0,s0=0,ruch=0;
+    t.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;d=true;ruch=0;x0=e.clientX;s0=t.scrollLeft;t.classList.add('ciag')});
+    addEventListener('pointermove',function(e){if(!d)return;ruch=Math.abs(e.clientX-x0);t.scrollLeft=s0-(e.clientX-x0)});
+    addEventListener('pointerup',function(){if(!d)return;d=false;t.classList.remove('ciag')});
+    var s=t.parentElement.querySelector('.strzalki')||t.nextElementSibling;
+    if(s&&s.classList.contains('strzalki'))s.querySelectorAll('button').forEach(function(k){k.addEventListener('click',function(){var f=t.querySelector('figure');t.scrollBy({left:(f.offsetWidth+18)*+k.dataset.w,behavior:'smooth'})})});
+  });
+  var mapa=document.getElementById('mapa');
+  function pokaz(){if(mapa.querySelector('iframe'))return;mapa.innerHTML='<iframe title="Mapa dojazdu: os. Poniatowskiego 17a, Trzcianka" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=os.+Poniatowskiego+17a,+64-980+Trzcianka&output=embed"></iframe>'}
+  mapa.querySelector('[data-mapa]').addEventListener('click',pokaz);
+  if('IntersectionObserver' in window){new IntersectionObserver(function(w,o){if(w[0].isIntersecting){pokaz();o.disconnect()}},{rootMargin:'200px'}).observe(mapa)}
+  var sek=[].slice.call(document.querySelectorAll('main section[id]')),linki=m.querySelectorAll('a[href^="#"]');
+  addEventListener('scroll',function(){var a='';sek.forEach(function(s){if(s.getBoundingClientRect().top<innerHeight*.4)a=s.id});linki.forEach(function(l){l.classList.toggle('akt',l.getAttribute('href')==='#'+a)})},{passive:true});
+})();
+</script>
+</body>
+</html>
